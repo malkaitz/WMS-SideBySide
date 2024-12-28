@@ -8,5 +8,5 @@ The ukrainian flag was added by myself to match newer versions.
 The Digital Democracy plugin don´t allow place the same layer in both sides hence you can`t compare all images you have.
 The code in this repo run the plugin each time a layer is selected. 
 This way you can compare all images.
-<img src="/images/lsbs.png" alt="lsbs" width="300">
+<img src="./images/lsbs.png" alt="lsbs" width="300">
 
