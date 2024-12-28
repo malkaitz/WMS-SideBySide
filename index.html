@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset=utf-8 />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+	<meta name='viewport'
+		content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui' />
+	<title>napargis</title>
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" 
+		crossorigin=""></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" 
+		 crossorigin="">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+	<script src="leaflet-side-by-side.js"></script>
+	
+	<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+		rel='stylesheet' />
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="L.Control.Locate.js"></script>
+	<link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+	<div id="wrap">
+		<div id='map'>
+			<div id='headerL' class='headerL'>
+				<div id="controlLeft">
+					<div class="vertical-line" ></div>
+					<form>
+						<label class="containerL" title="OpenStreetMap">OSM
+							<input type="radio" id="LOSM" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL" title="resolución 25 cm">2023
+							<input type="radio" id="L2023" name="layer" value="agua" checked>
+							<span class="checkmark"></span>
+						</label><br>						
+
+						<label class="containerL">2022
+							<input type="radio" id="L2022" name="layer" value="agua" checked>
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2021
+							<input type="radio" id="L2021" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2020
+							<input type="radio" id="L2020" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2019
+							<input type="radio" id="L2019" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2018
+							<input type="radio" id="L2018" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2017
+							<input type="radio" id="L2017" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL"> 2014
+							<input type="radio" id="L2014" name="layer" value="openCycle">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2013
+							<input type="radio" id="L2013" name="layer" value="bosque">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2012
+							<input type="radio" id="L2012" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2011
+							<input type="radio" id="L2011" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2010
+							<input type="radio" id="L2010" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2009
+							<input type="radio" id="L2009" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2008
+							<input type="radio" id="L2008" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2006
+							<input type="radio" id="L2006" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL" title="PNOA. Mitad sur de Navarra">2005
+							<input type="radio" id="L2005" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2004
+							<input type="radio" id="L2004" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL">2003
+							<input type="radio" id="L2003" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL"
+							title="Vuelos analógicos realizados entre 1998 y 2000. Julio de 1998 zona sur, agosto de 1998 zona oeste, noviembre de 1999 zona este, julio de 2000 zona este y junio-julio de 2000 zona norte.">2000
+							<input type="radio" id="L2000" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL" title="Cuenca de Pamplona">1982
+							<input type="radio" id="L1982" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL" title="Toma de las ortofotos: 1966, 1967, 1969, 1970 y 1971">1966
+							<input type="radio" id="L1966" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL" title="Años 1956-1957. Vuelos del ejército de EE.UU">1957
+							<input type="radio" id="L1957" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL" title="Años 1945-1946. Vuelos del ejército de EE.UU">1945
+							<input type="radio" id="L1945" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL"
+							title="Pseudo-ortofoto realizadada con parte de las imágenes del vuelo no fotogramétrico de Ruiz de Alda (1929-1933) utilizando un MDT actual. Centro y centro-este de Navarra.">1929
+							<input type="radio" id="L1929" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+					</form>
+				</div>
+			</div>
+
+			<div id='headerR' class='headerR'>
+				<div id="controlRight">
+					<div class="vertical-lineR">
+					</div>
+
+					<form>
+
+						<label class="containerR" title="OpenStreetMap">OSM
+							<input type="radio" id="ROutdoor" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR" title="resolución 25 cm">2023
+							<input type="radio" id="R2023" name="layer" value="agua" >
+							<span class="checkmarkR"></span>
+						</label><br>						
+
+						<label class="containerR">2022
+							<input type="radio" id="R2022" name="layer" value="agua" >
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2021
+							<input type="radio" id="R2021" name="layer" value="agua" >
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2020
+							<input type="radio" id="R2020" name="layer" value="agua" >
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2019
+							<input type="radio" id="R2019" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2018
+							<input type="radio" id="R2018" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2017
+							<input type="radio" id="R2017" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR"> 2014
+							<input type="radio" id="R2014" name="layer" value="openCycle">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2013
+							<input type="radio" id="R2013" name="layer" value="bosque">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2012
+							<input type="radio" id="R2012" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2011
+							<input type="radio" id="R2011" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2010
+							<input type="radio" id="R2010" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2009
+							<input type="radio" id="R2009" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2008
+							<input type="radio" id="R2008" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2006
+							<input type="radio" id="R2006" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR" title="PNOA. Mitad sur de Navarra.">2005
+							<input type="radio" id="R2005" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2004
+							<input type="radio" id="R2004" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR">2003
+							<input type="radio" id="R2003" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR"
+							title="Vuelos analógicos realizados entre 1998 y 2000. Julio de 1998 zona sur, agosto de 1998 zona oeste, noviembre de 1999 zona este, julio de 2000 zona este y junio-julio de 2000 zona norte.">2000
+							<input type="radio" id="R2000" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR" title="Cuenca de Pamplona">1982
+							<input type="radio" id="R1982" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR"
+							title="Años de toma de las ortofotos: 1966, 1967, 1969, 1970 y 1971">1966
+							<input type="radio" id="R1966" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR" title="Años 1956-1957. Vuelos del ejército de EE.UU">1957
+							<input type="radio" id="R1957" name="layer" value="agua" checked>
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR" title="Años 1945-1946. Vuelos del ejército de EE.UU">1945
+							<input type="radio" id="R1945" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+						<label class="containerR"
+							title="Pseudo-ortofoto realizadada con parte de las imágenes del vuelo no fotogramétrico de Ruiz de Alda (1929-1933) utilizando un MDT actual. Centro y centro-este de Navarra">1929
+							<input type="radio" id="R1929" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<script src="sBsmOutdoor.js"></script>
+</body>
+
+</html>
