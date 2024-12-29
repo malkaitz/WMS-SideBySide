@@ -1,5 +1,5 @@
 # WMS-SideBySide
-WMTS-SideBySide-Leaflet
+WMS-SideBySide-Leaflet. Allow all layers each side.
 
 This is an app to compare map service historic images in wmts or wms formats.<br>
 The plugin https://lab.digital-democracy.org/code/leaflet-side-by-side/ on leaflet7.7.1 is used.<br>
