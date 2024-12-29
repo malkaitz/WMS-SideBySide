@@ -1,4 +1,4 @@
-# WMTS-SideBySide
+# WMS-SideBySide
 WMTS-SideBySide-Leaflet
 
 This is an app to compare map service historic images in wmts or wms formats.<br>
