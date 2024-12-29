@@ -109,7 +109,7 @@ map.addControl(
 L.Control.Watermark = L.Control.extend({
   onAdd: function (map) {
     var img = L.DomUtil.create("img");
-    img.src = "./logo.png";
+    img.src = "./images/logo.png";
     img.style.width = "125px";
     img.onclick = function () {
       window.open("https://www.napargis.com/noain/index.html");
@@ -140,7 +140,7 @@ var ROutdoor = L.tileLayer(outdoorTilesUrl, { maxZoom: 22 });
 wmsLayerNames = [
   "IDENA:ortofoto_5000_2023",
   "IDENA:ortofoto_5000_2022",
-  "IDENA:ortofoto_5000_2021", 
+  "IDENA:ortofoto_5000_2021",
   "IDENA:ortofoto_5000_2020",
   "IDENA:ortofoto_5000_2019",
   "IDENA:ortofoto_5000_2018",
