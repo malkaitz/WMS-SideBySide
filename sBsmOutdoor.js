@@ -137,33 +137,6 @@ var outdoorTilesUrl =
 var LOSM = L.tileLayer(osmTilesUrl, { attribution: "" });
 var ROutdoor = L.tileLayer(outdoorTilesUrl, { maxZoom: 22 });
 
-wmsLayerNames = [
-  "IDENA:ortofoto_5000_2023",
-  "IDENA:ortofoto_5000_2022",
-  "IDENA:ortofoto_5000_2021",
-  "IDENA:ortofoto_5000_2020",
-  "IDENA:ortofoto_5000_2019",
-  "IDENA:ortofoto_5000_2018",
-  "IDENA:ortofoto_5000_2017",
-  "IDENA:ortofoto_5000_2014",
-  "IDENA:ortofoto_5000_2013",
-  "IDENA:ortofoto_5000_2012",
-  "IDENA:ortofoto_5000_2011",
-  "IDENA:ortofoto_5000_2010",
-  "IDENA:ortofoto_5000_2009",
-  "IDENA:ortofoto_5000_2008",
-  "IDENA:ortofoto_5000_2006",
-  "IDENA:ortofoto_5000_2005",
-  "IDENA:ortofoto_5000_2004",
-  "IDENA:ortofoto_5000_2003",
-  "IDENA:ortofoto_5000_98_00",
-  "IDENA:ortofoto_5000_1982",
-  "IDENA:ortofoto_5000_1966",
-  "IDENA:ortofoto_10000_1957",
-  "IDENA:ortofoto_10000_1945",
-  "IDENA:ortofoto_2500_1929",
-];
-
 wmsLayerNamesDict = {
   //year:LayerName in wms
   2023: "IDENA:ortofoto_5000_2023",
