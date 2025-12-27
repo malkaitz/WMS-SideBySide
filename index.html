@@ -8,21 +8,20 @@
 	<meta name='viewport'
 		content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui' />
 	<title>napargis</title>
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" 
-		crossorigin=""></script>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" 
-		 crossorigin="">
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" crossorigin="">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
 	<script src="leaflet-side-by-side.js"></script>
-	
+
 	<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 	<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
 		rel='stylesheet' />
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css" />
-	<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js"
+		charset="utf-8"></script>
 	<link rel="stylesheet" href="app.css">
 
 </head>
@@ -32,10 +31,17 @@
 		<div id='map'>
 			<div id='headerL' class='headerL'>
 				<div id="controlLeft">
-					<div class="vertical-line" ></div>
+					<div class="vertical-line"></div>
 					<form>
 						<label class="containerL" title="OpenStreetMap">OSM
 							<input type="radio" id="LOSM" name="layer" value="agua">
+							<span class="checkmark"></span>
+						</label><br>
+
+						<label class="containerL"
+							title="resolución 25 cm. Ortofotografía de Navarra del vuelo digital realizado en 2025. La resolución del vuelo es de 0,33 metros / pixel, la resolución de la ortofoto es de 25cm. El vuelo fue realizado entre los meses de julio, septiembre y octubre de 2025. El rango de altura del vuelo está entre los 8710 y 8490 metros sobre el nivel medio del mar.">
+							2025
+							<input type="radio" id="L2025" name="layer" value="agua" checked>
 							<span class="checkmark"></span>
 						</label><br>
 
@@ -47,7 +53,7 @@
 						<label class="containerL" title="resolución 25 cm">2023
 							<input type="radio" id="L2023" name="layer" value="agua" checked>
 							<span class="checkmark"></span>
-						</label><br>						
+						</label><br>
 
 						<label class="containerL">2022
 							<input type="radio" id="L2022" name="layer" value="agua" checked>
@@ -182,28 +188,35 @@
 							<span class="checkmarkR"></span>
 						</label><br>
 
+						<label class="containerR"
+							title="resolución 25 cm. Ortofotografía de Navarra del vuelo digital realizado en 2025. La resolución del vuelo es de 0,33 metros / pixel, la resolución de la ortofoto es de 25cm. El vuelo fue realizado entre los meses de julio, septiembre y octubre de 2025. El rango de altura del vuelo está entre los 8710 y 8490 metros sobre el nivel medio del mar.">
+							2025
+							<input type="radio" id="R2025" name="layer" value="agua">
+							<span class="checkmarkR"></span>
+						</label><br>
+
 						<label class="containerR" title="resolución 25 cm">2024
-							<input type="radio" id="R2024" name="layer" value="agua" >
+							<input type="radio" id="R2024" name="layer" value="agua">
 							<span class="checkmarkR"></span>
 						</label><br>
 
 						<label class="containerR" title="resolución 25 cm">2023
-							<input type="radio" id="R2023" name="layer" value="agua" >
+							<input type="radio" id="R2023" name="layer" value="agua">
 							<span class="checkmarkR"></span>
-						</label><br>						
+						</label><br>
 
 						<label class="containerR">2022
-							<input type="radio" id="R2022" name="layer" value="agua" >
+							<input type="radio" id="R2022" name="layer" value="agua">
 							<span class="checkmarkR"></span>
 						</label><br>
 
 						<label class="containerR">2021
-							<input type="radio" id="R2021" name="layer" value="agua" >
+							<input type="radio" id="R2021" name="layer" value="agua">
 							<span class="checkmarkR"></span>
 						</label><br>
 
 						<label class="containerR">2020
-							<input type="radio" id="R2020" name="layer" value="agua" >
+							<input type="radio" id="R2020" name="layer" value="agua">
 							<span class="checkmarkR"></span>
 						</label><br>
 

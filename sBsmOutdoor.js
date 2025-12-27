@@ -139,6 +139,7 @@ var ROutdoor = L.tileLayer(outdoorTilesUrl, { maxZoom: 22 });
 
 wmsLayerNamesDict = {
   //year:LayerName in wms
+  2025:"ortofoto_5000_2025",
   2024: "ortofoto_5000_2024",
   2023: "ortofoto_5000_2023",
   2022: "ortofoto_5000_2022",
@@ -265,7 +266,7 @@ $("#controlRight").click(function () {
 });
 
 $(
-  "#LOSM,#L2024,#L2023,#L2022,#L2021,#L2020,#L2019,#L2018,#L2017,#L2014,#L2013,#L2012,#L2011,#L2010,#L2009,#L2008,#L2006,#L2005,#L2004,#L2003,#L2000,#L1982,#L1966,#L1957,#L1945,#L1929"
+  "#LOSM,#L2025,#L2024,#L2023,#L2022,#L2021,#L2020,#L2019,#L2018,#L2017,#L2014,#L2013,#L2012,#L2011,#L2010,#L2009,#L2008,#L2006,#L2005,#L2004,#L2003,#L2000,#L1982,#L1966,#L1957,#L1945,#L1929"
 ).click(function () {
   var val = $("input.leaflet-sbs-range").prop("value");
   var divider = $("div.leaflet-sbs-divider").css("left");
@@ -336,7 +337,7 @@ $("#controlLeft").hover(function () {
 });
 
 $(
-  "#ROutdoor,#R2024,#R2023,#R2022,#R2021, #R2020, #R2019,#R2018,#R2017,#R2014,#R2013,#R2012,#R2011,#R2010,#R2009,#R2008,#R2006,#R2005,#R2004,#R2003,#R2000,#R1982,#R1966,#R1957,#R1945,#R1929"
+  "#ROutdoor,#R2025,#R2024,#R2023,#R2022,#R2021, #R2020, #R2019,#R2018,#R2017,#R2014,#R2013,#R2012,#R2011,#R2010,#R2009,#R2008,#R2006,#R2005,#R2004,#R2003,#R2000,#R1982,#R1966,#R1957,#R1945,#R1929"
 ).click(function () {
   var val = $("input.leaflet-sbs-range").prop("value");
   var divider = $("div.leaflet-sbs-divider").css("left");
