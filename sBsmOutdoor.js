@@ -139,31 +139,31 @@ var ROutdoor = L.tileLayer(outdoorTilesUrl, { maxZoom: 22 });
 
 wmsLayerNamesDict = {
   //year:LayerName in wms
-  2024: "IDENA:ortofoto_5000_2024",
-  2023: "IDENA:ortofoto_5000_2023",
-  2022: "IDENA:ortofoto_5000_2022",
-  2021: "IDENA:ortofoto_5000_2021",
-  2020: "IDENA:ortofoto_5000_2020",
-  2019: "IDENA:ortofoto_5000_2019",
-  2018: "IDENA:ortofoto_5000_2018",
-  2017: "IDENA:ortofoto_5000_2017",
-  2014: "IDENA:ortofoto_5000_2014",
-  2013: "IDENA:ortofoto_5000_2013",
-  2012: "IDENA:ortofoto_5000_2012",
-  2011: "IDENA:ortofoto_5000_2011",
-  2010: "IDENA:ortofoto_5000_2010",
-  2009: "IDENA:ortofoto_5000_2009",
-  2008: "IDENA:ortofoto_5000_2008",
-  2006: "IDENA:ortofoto_5000_2006",
-  2005: "IDENA:ortofoto_5000_2005",
-  2004: "IDENA:ortofoto_5000_2004",
-  2003: "IDENA:ortofoto_5000_2003",
-  2000: "IDENA:ortofoto_5000_98_00",
-  1982: "IDENA:ortofoto_5000_1982",
-  1966: "IDENA:ortofoto_5000_1966",
-  1957: "IDENA:ortofoto_10000_1957",
-  1945: "IDENA:ortofoto_10000_1945",
-  1929: "IDENA:ortofoto_2500_1929",
+  2024: "ortofoto_5000_2024",
+  2023: "ortofoto_5000_2023",
+  2022: "ortofoto_5000_2022",
+  2021: "ortofoto_5000_2021",
+  2020: "ortofoto_5000_2020",
+  2019: "ortofoto_5000_2019",
+  2018: "ortofoto_5000_2018",
+  2017: "ortofoto_5000_2017",
+  2014: "ortofoto_5000_2014",
+  2013: "ortofoto_5000_2013",
+  2012: "ortofoto_5000_2012",
+  2011: "ortofoto_5000_2011",
+  2010: "ortofoto_5000_2010",
+  2009: "ortofoto_5000_2009",
+  2008: "ortofoto_5000_2008",
+  2006: "ortofoto_5000_2006",
+  2005: "ortofoto_5000_2005",
+  2004: "ortofoto_5000_2004",
+  2003: "ortofoto_5000_2003",
+  2000: "ortofoto_5000_98_00",
+  1982: "ortofoto_5000_1982",
+  1966: "ortofoto_5000_1966",
+  1957: "ortofoto_10000_1957",
+  1945: "ortofoto_10000_1945",
+  1929: "ortofoto_2500_1929",
 };
 
 var yearLayerObjectArray = [];
@@ -188,12 +188,12 @@ $.each(yearLayerObjectArray, function (index, value) {
 
 var layerLeft = getWmsLeafletLayerObject(
   LtileLayersArray,
-  "IDENA:ortofoto_5000_2022"
+  "ortofoto_5000_2022"
 ).addTo(map);
 
 var layerRight = getWmsLeafletLayerObject(
   LtileLayersArray,
-  "IDENA:ortofoto_10000_1957"
+  "ortofoto_10000_1957"
 ).addTo(map);
 
 L.control.sideBySide(layerLeft, layerRight).addTo(map);
