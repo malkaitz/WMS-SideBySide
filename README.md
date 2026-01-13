@@ -8,7 +8,7 @@ and don't allow place the same layer in both sides hence you can't compare all i
 The code in sBsmOutdoor.js allow compare all imagery loading the services each time the service imagery is changed extending the funcionality in leaflet-side-by-side.js. <br>
 This way you can compare all images.<br>
 Viewer in :
-https://napargis.com/
+https://napargis.com/](https://malkaitz.github.io/WMS-SideBySide/
 
 
 <img src="./images/lsbs.jpg" alt="lsbs" width="300">
